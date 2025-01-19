@@ -190,7 +190,7 @@ function Home() {
         >
           <MainTitle />
           <p
-            className="text-base text-gray-200 max-w-xl leading-relaxed font-light mx-auto lg:mx-0"
+            className="text-base text-justify text-gray-200 max-w-xl leading-relaxed font-light mx-auto lg:mx-0"
             data-aos="fade-up"
             data-aos-delay="1000"
           >
