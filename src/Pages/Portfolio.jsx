@@ -10,6 +10,7 @@ import Box from "@mui/material/Box";
 import CardProject from "../components/ProjectCard";
 import Certificate from "../components/Certificate";
 import { Code, Award } from "lucide-react";
+import { useEffect } from "react";
 
 // Separate ShowMore/ShowLess button component
 const ToggleButton = ({ onClick, isShowingMore }) => (
@@ -78,38 +79,64 @@ function a11yProps(index) {
 const projects = [
   {
     id: 1,
-    Img: "Frontend.svg",
-    Title: "Project One",
-    Description: "Description of project one",
-    Link: "http://example.com/project1",
+    Img: "weather.svg",
+    Title: "Weather App",
+    Description:
+      "I built a weather app using Express.js and a real-time weather API, with a simple and intuitive frontend crafted in pure HTML, CSS, and JavaScript. The app lets users enter any city name to instantly get accurate weather details like temperature, humidity, and more. It was a fun and fulfilling project that combines my love for coding with creating something genuinely useful for everyday life.",
+    Features: [
+      "Fetches live weather data for any city worldwide.",
+      "Simple input field for users to type a city name and receive weather temperature.",
+      "Clean and responsive frontend ensures accessibility across various devices.",
+      "Displays error messages for invalid city names.",
+    ],
+    TechStack: ["HTML", "CSS", "JavaScript", "ExpressJS"],
+    Github: "https://github.com/NAEEM-UL-HASSAN/WeatherApp.git",
+    Link: "https://my-weather-app-dev.vercel.app/",
   },
   {
     id: 2,
-    Img: "SE.svg",
-    Title: "Project Two",
-    Description: "Description of project two",
-    Link: "http://example.com/project2",
+    Img: "TODO.svg",
+    Title: "TODO App",
+    Description:
+      "I created a Todo Application using ReactJS, Redux Toolkit, Vanilla CSS and Bootstrap to make task management simple and efficient. The app features an intuitive interface that allows users to add, edit, and delete tasks effortlessly, with the added flexibility of switching between light and dark modes. It's designed to help users stay organized and productive with ease.",
+    Features: [
+      "Add, edit, and delete tasks seamlessly.",
+      "Toggle between light and dark themes for a personalized user experience.",
+      " Instant updates to the task list using Redux Toolkit for state management.",
+      "Built with Bootstrap for a clean, user-friendly interface across devices.",
+    ],
+    TechStack: ["ReactJS", "CSS", "Bootstrap", "Redux"],
+    Github: "https://github.com/NAEEM-UL-HASSAN/Reactjs-todo-App.git",
+    Link: "https://my-todo-app-dev.vercel.app/",
   },
   {
     id: 3,
-    Img: "SML.svg",
-    Title: "Project Three",
-    Description: "Description of project three",
-    Link: "http://example.com/project3",
+    Img: "spotify.svg",
+    Title: "Spotify Clone",
+    Description:
+      "I have created a Spotify clone using HTML, CSS, and JavaScript to bring the experience of personalized music streaming to life. This project focuses on delivering a sleek, user-friendly interface, with features that emulate the functionality of Spotify. It's been a rewarding journey to combine my passion for music and web development into this project.",
+    Features: [
+      "Play music from created playlists.",
+      "Clean and user-friendly design for a smooth experience.",
+      "Fully responsive layout, ensuring a seamless experience on any device.",
+    ],
+    TechStack: ["HTML", "CSS", "JavaScript"],
+    Github: "https://github.com/NAEEM-UL-HASSAN/Spotify-Clone.git",
+    Link: "https://my-spotify-clone-dev.vercel.app/",
   },
   {
     id: 4,
-    Img: "SML.svg",
-    Title: "Project Five",
-    Description: "Description of project five",
-    Link: "http://example.com/project5",
-  },
-  {
-    id: 5,
-    Img: "MERN.svg",
-    Title: "Project Four",
-    Description: "Description of project four",
-    Link: "http://example.com/project4",
+    Img: "simple.svg",
+    Title: "Simple Portfolio",
+    Description:
+      "I've created a portfolio website showcasing my work and skills. Built using HTML5, Tailwind CSS, and JavaScript, this website highlights my projects and provides a personal introduction to my work. I've also used JavaScript to add a typing effect for a dynamic touch. The website is fully responsive, ensuring it looks great on all devices—from desktops to smartphones.",
+    Features: [
+      "Adapts seamlessly to all screen sizes, from mobile phones to desktops.",
+      "Highlights my skills and previous work in a clean layout.",
+    ],
+    TechStack: ["HTML", "Tailwind", "JavaScript"],
+    Github: "https://github.com/NAEEM-UL-HASSAN/Project-1.git",
+    Link: "https://my-first-simple-portfolio-dev.vercel.app/",
   },
 ];
 
@@ -135,6 +162,10 @@ function Portfolio() {
   const [showAllCertificates, setShowAllCertificates] = useState(false);
   const isMobile = window.innerWidth < 768;
   const initialItems = isMobile ? 4 : 6;
+
+  useEffect(() => {
+    localStorage.setItem("projects", JSON.stringify(projects));
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

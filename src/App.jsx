@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
 import TechStack from "./Pages/TechStack";
 import Portfolio from "./Pages/Portfolio";
+import ProjectDetails from "./components/ProjectDetails";
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
     <>
@@ -46,6 +47,7 @@ function App() {
             />
           }
         />
+        <Route path="/project/:id" element={<ProjectDetails />} />
       </Routes>
     </BrowserRouter>
   );
