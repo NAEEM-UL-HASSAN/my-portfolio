@@ -106,7 +106,7 @@ const ProjectDetails = () => {
               {project.Title}
             </h1>
 
-            <p className="text-lg text-gray-200 leading-relaxed">
+            <p className="text-lg text-gray-200 text-justify leading-relaxed">
               {project.Description}
             </p>
 
