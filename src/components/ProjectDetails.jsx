@@ -86,7 +86,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#030014] px-6 py-10 relative">
+    <div className="min-h-screen bg-[#030014] px-4 md:px-6 py-10 relative overflow-x-hidden">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center space-x-4 mb-8">
           <button
@@ -100,7 +100,7 @@ const ProjectDetails = () => {
           </button>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="space-y-6" data-aos="fade-up" data-aos-delay="200">
             <h1 className="text-3xl font-bold text-white bg-gradient-to-r from-green-300 to-cyan-300 bg-clip-text text-transparent">
               {project.Title}
@@ -132,7 +132,7 @@ const ProjectDetails = () => {
             <h3 className="text-xl font-semibold text-white mb-4">
               Technology Used
             </h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 overflow-hidden">
               {project.TechStack.length > 0 ? (
                 project.TechStack.map((tech, index) => (
                   <TechBadge key={index} tech={tech} />
