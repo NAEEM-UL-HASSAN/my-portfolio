@@ -9,7 +9,7 @@ const ChangingText = ({ words }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 2000); // Change word every 2 seconds
+    }, 2000);
     return () => clearInterval(interval);
   }, [words.length]);
 
@@ -26,7 +26,7 @@ const ChangingText = ({ words }) => {
           animate={{
             opacity: i === index ? 1 : 0,
             rotateX: i === index ? 0 : -180,
-            z: i === index ? 50 : -100, // Move forward slightly
+            z: i === index ? 50 : -100, 
           }}
           exit={{
             opacity: 0,
@@ -34,7 +34,7 @@ const ChangingText = ({ words }) => {
             z: -100,
           }}
           transition={{
-            duration: 0.8, // Smooth flipping effect
+            duration: 0.8,
             ease: "easeInOut",
           }}
           className="main-title absolute text-2xl sm:text-3xl md:text-4xl font-bold text-green-500 whitespace-nowrap"

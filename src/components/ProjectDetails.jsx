@@ -86,7 +86,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#030014] px-4 md:px-6 py-10 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#030014] px-4 md:px-6 py-10 relative">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center space-x-4 mb-8">
           <button

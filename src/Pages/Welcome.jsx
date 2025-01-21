@@ -69,7 +69,6 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
           exit="exit"
           variants={containerVariants}
         >
-          {/* <BackgroundEffect /> */}
 
           <div className="relative min-h-screen flex items-center justify-center px-4">
             <div className="w-full max-w-4xl mx-auto">
@@ -89,7 +88,6 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                 ))}
               </motion.div>
 
-              {/* Welcome Text */}
               <motion.div
                 className="text-center mb-6 sm:mb-8 md:mb-12"
                 variants={childVariants}

@@ -23,7 +23,7 @@ const Certificate = ({ Img }) => {
 
   return (
     <Box component="div" sx={{ width: "100%" }}>
-      {/* Thumbnail Container */}
+
       <Box
         className=""
         sx={{
@@ -48,7 +48,7 @@ const Certificate = ({ Img }) => {
           },
         }}
       >
-        {/* Certificate Image with Initial Filter */}
+
         <Box
           sx={{
             position: "relative",
@@ -80,7 +80,6 @@ const Certificate = ({ Img }) => {
           />
         </Box>
 
-        {/* Hover Overlay */}
         <Box
           className="overlay"
           sx={{
@@ -96,7 +95,6 @@ const Certificate = ({ Img }) => {
           }}
           onClick={handleOpen}
         >
-          {/* Hover Content */}
           <Box
             className="hover-content"
             sx={{
@@ -131,7 +129,6 @@ const Certificate = ({ Img }) => {
         </Box>
       </Box>
 
-      {/* Modal */}
       <Modal
         open={open}
         onClose={handleClose}
@@ -170,7 +167,6 @@ const Certificate = ({ Img }) => {
             },
           }}
         >
-          {/* Close Button */}
           <IconButton
             onClick={handleClose}
             sx={{

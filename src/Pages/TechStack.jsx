@@ -44,7 +44,6 @@ const TechStackIcon = ({ TechStackIcon, Language, Knowledge }) => {
       <span className="text-gray-200 font-semibold text-sm md:text-base tracking-wide group-hover:text-white transition-colors duration-300">
         {Language}
       </span>
-      {/* Progress bar */}
       <div className="w-full">
         <div
           className="bg-gray-200 rounded-full h-2"
@@ -53,7 +52,7 @@ const TechStackIcon = ({ TechStackIcon, Language, Knowledge }) => {
         >
           <motion.div
             className="bg-green-600 h-2 rounded-full"
-            initial={{ width: "0%" }} // Start at 0%
+            initial={{ width: "0%" }}
             animate={{ width: `${Knowledge}%` }}
             transition={{
               duration: 2,

@@ -12,7 +12,6 @@ import Certificate from "../components/Certificate";
 import { Code, Award } from "lucide-react";
 import { useEffect } from "react";
 
-// Separate ShowMore/ShowLess button component
 const ToggleButton = ({ onClick, isShowingMore }) => (
   <button
     onClick={onClick}
@@ -79,6 +78,24 @@ function a11yProps(index) {
 const projects = [
   {
     id: 1,
+    Img: "portfolio.svg",
+    Title: "My Portfolio",
+    Description:
+      "This is my personal portfolio website, built with ReactJS. It highlights my skills, projects, and experiences while offering a smooth, interactive experience. With a responsive design and modern animations, the site ensures seamless navigation and an engaging user interface. You can also easily get in touch with me through the contact page.",
+    Features: [
+      "A beautiful landing page to greet you.",
+      "Works perfectly on both mobile and desktop.",
+      "Using Framer Motion and AOS for engaging transitions.",
+      " Designed with Material UI and styled with Tailwind CSS.",
+      "Managed by React Router for easy page transitions.",
+      "Allows users to send messages, which I receive directly via email.",
+    ],
+    TechStack: ["ReactJS", "Tailwind", "MUI", "Motion", "AOS", "Lucide"],
+    Github: "https://github.com/NAEEM-UL-HASSAN/my-portfolio.git",
+    Link: "https://naeem-portfolio-dev.vercel.app/",
+  },
+  {
+    id: 2,
     Img: "weather.svg",
     Title: "Weather App",
     Description:
@@ -94,7 +111,7 @@ const projects = [
     Link: "https://my-weather-app-dev.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     Img: "TODO.svg",
     Title: "TODO App",
     Description:
@@ -110,7 +127,7 @@ const projects = [
     Link: "https://my-todo-app-dev.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     Img: "spotify.svg",
     Title: "Spotify Clone",
     Description:
@@ -125,7 +142,7 @@ const projects = [
     Link: "https://my-spotify-clone-dev.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     Img: "simple.svg",
     Title: "Simple Portfolio",
     Description:
@@ -137,6 +154,21 @@ const projects = [
     TechStack: ["HTML", "Tailwind", "JavaScript"],
     Github: "https://github.com/NAEEM-UL-HASSAN/Project-1.git",
     Link: "https://my-first-simple-portfolio-dev.vercel.app/",
+  },
+  {
+    id: 6,
+    Img: "meal.svg",
+    Title: "My Meal",
+    Description:
+      "This is my first website, created using HTML and CSS. It's fully responsive, ensuring it works well on any device, from desktops to smartphones. I focused on making the design clean, easy to use, and functional for a smooth browsing experience.",
+    Features: [
+      "Fully responsive design that adjusts smoothly to different screen sizes.",
+      "Simple and clean layout built using HTML and CSS.",
+      "Easy navigation for a user-friendly experience across all devices.",
+    ],
+    TechStack: ["HTML", "CSS"],
+    Github: "https://github.com/NAEEM-UL-HASSAN/My-Meal.git",
+    Link: "https://naeem-ul-hassan.github.io/My-Meal/",
   },
 ];
 
@@ -191,7 +223,6 @@ function Portfolio() {
       className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden"
       id="Portfolio"
     >
-      {/* Header section */}
       <div
         className="text-center pb-10"
         data-aos="fade-up"

@@ -80,10 +80,8 @@ const Button = ({ href, text, icon: Icon }) => {
       // Open PDF in a new tab
       window.open("Resume.pdf", "_blank");
     } else {
-      // Prevent default anchor behavior (if href was passed)
       e.preventDefault();
 
-      // Get the target section by ID
       const targetSection = document.querySelector(href);
 
       if (targetSection) {
@@ -119,40 +117,6 @@ const Button = ({ href, text, icon: Icon }) => {
   );
 };
 
-// const Button = ({ href, text, icon: Icon }) => {
-//   const handleClick = (e) => {
-//     // Prevent default behavior
-//     e.preventDefault();
-
-//     // Open PDF in a new tab
-//     window.open(href, "_blank");
-//   };
-
-//   return (
-//     <button
-//       onClick={handleClick}
-//       id="my-button"
-//       className="group relative w-[110px] sm:w-[160px]"
-//     >
-//       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#21365b] to-[#184455] rounded-xl opacity-50 blur-md group-hover:opacity-90 transition-all duration-700"></div>
-//       <div className="relative h-11 bg-[#030014] backdrop-blur-xl rounded-lg border border-white/10 leading-none overflow-hidden">
-//         <div className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 bg-gradient-to-r from-[#21365b]/30 to-[#184455]/30"></div>
-//         <span className="absolute inset-0 flex items-center justify-center gap-2 text-sm group-hover:gap-3 transition-all duration-300">
-//           <span className="bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent font-medium z-10">
-//             {text}
-//           </span>
-//           <Icon
-//             className={`w-4 h-4 text-gray-200 ${
-//               text === "Resume"
-//                 ? "group-hover:translate-x-1"
-//                 : "group-hover:rotate-45"
-//             } transform transition-all duration-300 z-10`}
-//           />
-//         </span>
-//       </div>
-//     </button>
-//   );
-// };
 const SocialLink = ({ icon: Icon, link }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
@@ -170,7 +134,7 @@ function Home() {
   const SOCIAL_LINKS = [
     { icon: Github, link: "https://github.com/NAEEM-UL-HASSAN" },
     { icon: Linkedin, link: "https://www.linkedin.com/in/naeem-hashmi/" },
-    { icon: Mail },
+    { icon: Mail, link: "mailto:naeemhashmi870@gmail.com" },
   ];
 
   useEffect(() => {
@@ -219,8 +183,6 @@ function Home() {
             ))}
           </div>
         </div>
-
-        {/* Profile Image on the right side */}
         <div className="order-1 lg:order-2">
           <ProfileImage />
         </div>

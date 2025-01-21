@@ -151,7 +151,6 @@ const Navbar = () => {
       >
         <div className="flex flex-col h-full mt-16 z-20">
           {" "}
-          {/* Added z-20 and margin-top */}
           <div className="px-4 py-6 space-y-4 flex-1">
             {navItems.map((item, index) => (
               <a
