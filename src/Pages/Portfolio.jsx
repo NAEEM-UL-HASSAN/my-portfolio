@@ -183,6 +183,9 @@ const certificates = [
     Img: "SML.svg",
   },
   {
+    Img: "FS.svg",
+  },
+  {
     Img: "MERN.svg",
   },
 ];

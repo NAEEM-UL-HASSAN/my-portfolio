@@ -41,7 +41,7 @@ const TechStackIcon = ({ TechStackIcon, Language, Knowledge }) => {
           className="relative h-16 w-16 md:h-20 md:w-20 transform transition-transform duration-300"
         />
       </div>
-      <span className="text-gray-200 font-semibold text-sm md:text-base tracking-wide group-hover:text-white transition-colors duration-300">
+      <span className="text-gray-200 font-semibold text-sm md:text-base tracking-wide group-hover:text-white transition-colors duration-300 text-nowrap">
         {Language}
       </span>
       <div className="w-full">
@@ -90,6 +90,7 @@ function TechStack() {
     { icon: "nodejs.svg", language: "Node JS", Knowledge: 85 },
     { icon: "expressjs.svg", language: "Express JS", Knowledge: 80 },
     { icon: "mongodb.svg", language: "MongoDB", Knowledge: 86 },
+    { icon: "git.svg", language: "Version Control", Knowledge: 80 },
   ];
   return (
     <div

@@ -16,13 +16,14 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      const navbarHeight = document.querySelector("nav").offsetHeight;
       const sections = navItems
         .map((item) => {
           const section = document.querySelector(item.href);
           if (section) {
             return {
               id: item.href.replace("#", ""),
-              offset: section.offsetTop - 550,
+              offset: section.offsetTop - navbarHeight - 50,
               height: section.offsetHeight,
             };
           }
